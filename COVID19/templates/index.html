@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/cor.jpg')}}">
+
+    <title>COVID Probability Detector</title>
+    <style type="text/css">
+    .jumbotron {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <!--navbar navbar-expand-lg navbar-dark bg-dark-->
+
+    <nav class="navbar navbar-light" style="background-color: #ee422e;">
+      <a class="navbar-brand" href="#"><b>COVID-19 Detector</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('contactus')}}">Contact Us</a>
+          </li>
+        </ul>
+      </div> -->
+    </nav>
+ 
+        <!-- jumbotron jumbotron-fluid bg-secondary text-white mt-1 mx-2-->
+    <div class="navbar navbar-light" style="background-color: #ff7b6d;">
+      <div class="container d-flex justify-content-center">
+        <h1 class="display-6"><b>Corona Virus Probability Detector</b></h1>
+      </div>
+    </div>
+
+     <div class="container w-50 bg-light">
+       <div class="row">
+      <div class="col-sm" style="background-color: #ffa9a0;">
+        <div class="jumbotron jumbotron-fluid w-100 h-100">
+          <img src="{{url_for('static',filename='images/coronas.jpg')}}" class="img-fluid h-100" alt="Responsive image">
+        </div>
+      </div>
+         <div class="col-sm" style="background-color: #ffa9a0;">
+        <form method="POST" action="/">
+            <div class="form-group">
+              <label for="fever" class="text-info font-weight-bold">Enter Fever Value</label>
+              <input type="text" class="form-control" id="fever" name="fever" placeholder="Enter Fever Value" required>
+            </div>
+            <div class="form-group">
+                <label for="age" class="text-info font-weight-bold">Enter Age Value</label>
+                <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age Value" required>
+              </div>
+            <div class="form-group">
+              <label for="pain" class="text-info font-weight-bold">Body Pain</label>
+              <select class="form-control custom-select" id="pain" name="pain">
+                <option value="0">No Pain</option>
+                <option value="1">Severe Pain</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="runnyNose" class="text-info font-weight-bold">Runny Nose</label>
+                <select class="form-control custom-select" id="runnyNose" name="runnyNose">
+                  <option value="0">Yes</option>
+                  <option value="1">No</option>
+                </select>
+              </div>
+              <div class="form-group">
+                  <label for="diffBreath" class="text-info font-weight-bold">Breathing Difficulty</label>
+                  <select class="form-control custom-select" id="diffBreath" name="diffBreath">
+                    <option value="-1">No Difficulty</option>
+                    <option value="0">Little Difficulty</option>
+                    <option value="1">Severe Difficulty</option>
+                  </select>
+                </div>
+            <button class="navbar navbar-light" style="background-color: #ee422e;">Submit</button>
+          </form>
+        </div>
+    </div>
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 7%;
+      background-color: #ee422e;
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+    </style>
+    
+    <div class="footer">
+      <div class="contact">
+        <a target="_blank" href="https://github.com/imsanjoykb"><i class="fab fa-github fa-lg contact-icon"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/imsanjoykb/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+    </div>
+    <h4 class='footer-description'>Developed by Sanjoy Biswas</h4>
+    </div>
+
+</html>

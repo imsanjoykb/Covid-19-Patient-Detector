@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typed.js"></script>
+
+    <link rel="shortcut icon" href="{{url_for('static',filename='images/covid.ico')}}">
+
+    <title>COVID Probability Detector</title>
+    <style type="text/css">
+    .jumbotron {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+      }
+    
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-light" style="background-color: #ee422e;">
+      <a class="navbar-brand" href="#"><b>COVID-19 Detector</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{url_for('contactus')}}">Contact Us</a>
+          </li>
+        </ul>
+      </div>-->
+    </nav>
+
+    <div class="navbar navbar-light" style="background-color: #ff7b6d;">
+      <div class="container d-flex justify-content-center">
+        <h1 class="display-6"><b>Corona Virus Probability Detector</b></h1>
+      </div>
+    </div>
+      <!--container bg-light -->
+     <div class="container col-sm" style="background-color: #fab5ae;">
+      <p class="d-flex justify-content-center">Patient's Status is<b>&nbsp{{prediction}}</b>&nbsp.</p>
+        <p class="d-flex justify-content-center">Patient's probability of infection is<b>&nbsp{{inf}}</b>&nbsp%.</p>
+        <p class="d-flex justify-content-center">Thanks for using Covid probability detector.</p>
+        <a href="/" class="d-flex justify-content-center"><button class="btn btn-outline-success my-2 my-sm-0 " type="submit" style="background-color: #ee422e;">Go Back</button></a>
+    </div>
+    
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  </body>
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 7%;
+      background-color: #ee422e;
+      color: rgb(0, 0, 0);
+      text-align: center;
+    }
+    </style>
+    
+    <div class="footer">
+      <div class="contact">
+        <a target="_blank" href="https://github.com/imsanjoykb"><i class="fab fa-github fa-lg contact-icon"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/imsanjoykb/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+    </div>
+    <h4 class='footer-description'>Developed by Sanjoy Biswas</h4>
+    </div>
+</html>
